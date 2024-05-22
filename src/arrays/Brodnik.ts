@@ -62,15 +62,6 @@ class Brodnik {
         }
     }
 
-    private shrink(): void {
-        let superblock = this.getSuperblock(this.elementCount + 1);
-        if (superblock % 2 === 1) {
-            this.dataBlockCount /= 2;
-        } else {
-            this.dataBlockLength /= 2;
-        }
-    }
-
     addElement(element: number): void {
         let [referenceIndex, dataIndex] = this.locate(this.elementCount + 1);
         if (referenceIndex === this.array.length) {
