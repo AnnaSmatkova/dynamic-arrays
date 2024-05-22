@@ -105,7 +105,7 @@ class Brodnik {
                 console.log(this.array[referenceIndex + 1]);
             }
     
-            const [newReferenceIndex, newDataIndex] = this.locate(this.elementCount);
+            const [_, newDataIndex] = this.locate(this.elementCount);
     
             if (newDataIndex + 1 !== this.dataBlockLength) {
                 this.dataBlockLength = Math.floor(this.dataBlockLength / 2);
